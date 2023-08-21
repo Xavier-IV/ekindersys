@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ekindersys</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body class="flex h-screen">
+<nav id="sidebar">
+  <div class="mb-10 text-center text-white">
+    <%= link_to root_path, class: 'text-center text-2xl flex items-center justify-center' do %>
+      EKS
+    <% end %>
+    <span class="text-sm text-gray-600">Open Source</span>
+  </div>
+  <%= link_to root_path, class: ['nav', active_class(root_path)] do %>
+    <i class="lni lni-home"></i> Dashboard
+  <% end %>
+</nav>
+<main>
+  <div class="content">
+    <%= yield %>
+  </div>
+</main>
+</body>
+</html>
