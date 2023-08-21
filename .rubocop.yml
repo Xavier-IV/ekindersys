@@ -1,0 +1,49 @@
+require: rubocop-rails
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*'
+
+Naming/VariableNumber:
+  EnforcedStyle: 'snake_case'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/*'
+    - 'config/routes.rb'
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - 'bin/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*'
+    - 'bin/*'
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - 'db/migrate/*'
+    - 'bin/*'
+
+Style/Documentation:
+  Enabled: false
+  Exclude:
+    - 'db/migrate/*'
+    - 'bin/*'
+    - 'test/*'
+
+Style/IfUnlessModifier:
+  Exclude:
+    - 'bin/*'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'app/concepts/**/*'
+
+Layout/LineLength:
+  Exclude:
+    - 'bin/*'
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
