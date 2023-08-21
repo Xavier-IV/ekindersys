@@ -1,24 +1,36 @@
-# README
+# E-Kinder System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An open-source kindergarten management system.
 
-Things you may want to cover:
+## Requirement
 
-* Ruby version
+- Ruby 3.2.0
+- Docker
+- MySQL
 
-* System dependencies
+## Proposed Features
 
-* Configuration
+1. Staff management
+2. Parent management
+3. Student management
 
-* Database creation
+## Setup
 
-* Database initialization
+```bash
+$ export APP_DATABASE_PASSWORD=<your_db_password>
 
-* How to run the test suite
+# Setup database
+$ rails db:create
+$ rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+# start server
+$ rails s
+```
 
-* Deployment instructions
+Then simply head over to http://localhost:3000
 
-* ...
+
+### Background
+
+As I grew up, I watched my mother manage her kindergarten for more than a decades. There are some pain points that
+I'd like to solve and hopefully this system can bring benefit to her and everyone.
